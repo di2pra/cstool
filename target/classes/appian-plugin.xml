@@ -1,0 +1,10 @@
+<appian-plugin name="Credit Suisse Tools" key="com.appiancorp.ps.cstools">
+    <plugin-info>
+        <description>Pradheep's Test functions</description>
+        <vendor name="Appian Corporation" url="http://www.appian.com" />
+        <version>1.0.0</version>
+    </plugin-info>
+    <function-category key="CSToolsCategory" name="Credit Suisse Tools" />
+    <function key="CSFunctions" class="com.appiancorp.ps.cstools.CSFunctions" />
+    <function key="ExampleWriterFunctions" class="com.appiancorp.ps.cstools.ExampleWriterFunction" />
+</appian-plugin>
