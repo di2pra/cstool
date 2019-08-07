@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.appiancorp.ps</groupId>
   <artifactId>com.appiancorp.ps.cstools</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>Credit Suisse Tools</name>
   <description>Credit Suisse Tools plugin</description>
   <url></url>

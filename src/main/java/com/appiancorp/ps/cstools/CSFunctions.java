@@ -25,35 +25,56 @@ public class CSFunctions {
 	
 	
 	private static void removeNullFields(Object object) throws JSONException {
+		
+		// if the object is an array
 	    if (object instanceof JSONArray) {
 	    	
+	    	// cast the array
 	        JSONArray array = (JSONArray) object;
-	        for (int i = 0; i < array.length(); ++i) removeNullFields(array.get(i));
 	        
+	        // iterate through the array
+	        for (int i = 0; i < array.length(); ++i) removeNullFields(array.get(i));
+	      
+	    // if the object is an json object
 	    } else if (object instanceof JSONObject) {
 	    	
+	    	// cast the object
 	        JSONObject json = (JSONObject) object;
+	        
+	        // get the list of keys
 	        JSONArray names = json.names();
 	        
-	        
+	        // if no key return
 	        if (names == null) return;
+	        
+	        // iterate through each key
 	        for (int i = 0; i < names.length(); ++i) {
+	        	
+	        	
 	            String key = names.getString(i);
 	            
 	            Object value = json.get(key);
 	            
 	            // if value is an array
 	            if(value instanceof JSONArray) {
+	            	// if the array is empty
 	            	if(((JSONArray) value).isEmpty()) {
+	            		
+	            		// then remove the key
 	            		json.remove(key);
-	            		return;
 	            	}
+	            	
 	            }
 	            
 	            if (json.isNull(key) || json.get(key).equals("")) {
+	            	
+	            	// then remove the key
 	                json.remove(key);
+	                
 	            } else {
+	            	
 	                removeNullFields(json.get(key));
+	                
 	            }
 	        }
 	        
