@@ -6,5 +6,4 @@
     </plugin-info>
     <function-category key="CSToolsCategory" name="Credit Suisse Tools" />
     <function key="CSFunctions" class="com.appiancorp.ps.cstools.CSFunctions" />
-    <function key="ExampleWriterFunctions" class="com.appiancorp.ps.cstools.ExampleWriterFunction" />
 </appian-plugin>
